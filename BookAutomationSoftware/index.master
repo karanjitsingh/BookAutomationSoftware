@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="BookAutomationSoftware.Site" EnableTheming="true" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="login">
+            <asp:HyperLink ID="hypSignin" Text="Sign In" runat="server" NavigateUrl="/login.aspx"/>
+            <asp:Label ID="lblWelcomeText" Text="Hi, " Visible="false" runat="server"></asp:Label>
+            <asp:HyperLink ID="hypSignout" style="margin-left:20px;" Text="Sign Out" runat="server" NavigateUrl="/index.aspx?logout"/>
+        </div>
+        <div class="header-content">
+            <div class="logo"></div>
+            <asp:Label ID="lblHeader" Text="Book Automation Software" runat="server"></asp:Label>
+        </div>
+        <nav id="navLinks" runat="server">
+            <asp:HyperLink CssClass="selected" Text="Home" Visible="true" runat="server" AccessLevel="1" NavigateUrl="/index.aspx"></asp:HyperLink>
+            <asp:HyperLink Text="Sales" Visible="true" runat="server" AccessLevel="1" NavigateUrl="/content/sales.aspx"></asp:HyperLink>
+            <asp:HyperLink Text="Inventory" Visible="true" runat="server" AccessLevel="2" NavigateUrl="/content/inventory.aspx"></asp:HyperLink>
+            <asp:HyperLink Text="Stats" Visible="true" runat="server" AccessLevel="2" NavigateUrl="/content/stats.aspx"></asp:HyperLink>
+        </nav>
+    </header>
+    <asp:ContentPlaceHolder ID="masterContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

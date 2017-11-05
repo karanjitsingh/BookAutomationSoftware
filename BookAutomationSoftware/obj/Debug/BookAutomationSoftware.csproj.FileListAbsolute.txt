@@ -1,0 +1,9 @@
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\bin\BookAutomationSoftware.dll.config
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\bin\BookAutomationSoftware.dll
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\bin\BookAutomationSoftware.pdb
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\obj\Debug\BookAutomationSoftware.csprojResolveAssemblyReference.cache
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\obj\Debug\BookAutomationSoftware.csproj.CoreCompileInputs.cache
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\obj\Debug\BookAutomationSoftware.dll
+D:\Codebase\BookAutomationSoftware\BookAutomationSoftware\obj\Debug\BookAutomationSoftware.pdb
