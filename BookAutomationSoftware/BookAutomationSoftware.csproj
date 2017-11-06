@@ -66,11 +66,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\BAS\inventory.css" />
     <Content Include="App_Themes\BAS\login.css" />
     <Content Include="App_Themes\BAS\index.css" />
     <Content Include="App_Themes\BAS\sales.css" />
     <Content Include="App_Themes\BAS\theme.css" />
     <Content Include="content\receipt.aspx" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\add.png" />
+    <Content Include="images\save.png" />
     <Content Include="images\search.png" />
     <Content Include="images\logo.png" />
     <Content Include="index.aspx" />

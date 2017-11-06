@@ -1,0 +1,66 @@
+﻿.inventory-content {
+    margin: 40px auto;
+    width:882px;
+    overflow:hidden;
+}
+
+.inventory-content input[type=text]{
+    width:120px;
+    border:1px none;
+    text-align:center;
+    font-style:italic;
+    padding:0px;
+    outline:none;
+    box-sizing: border-box;
+    line-height: 22px;
+    border-collapse: collapse;
+    color:#666;
+    padding: 0px 5px;
+}
+
+.inventory-content td, .inventory-content table, .inventory-content th {
+    border: none;
+    padding:0px;
+    text-align:center;
+    line-height:22px;
+    border-collapse:collapse
+}
+
+.inventory-content th {
+    border-bottom: 1px solid #ddd;
+}
+
+.insert-row {
+    border: 1px solid #ddd;
+
+}
+
+.rowedit-button {
+    outline:none;
+    position:absolute;
+    left:-273px;
+    top:5px;
+}
+
+.inventory-content td:last-child {
+    position:relative;
+    
+}
+
+.rowedit-button[alt="Cancel"] {
+    left:-265px;
+}
+
+.rowedit-button[alt="Update"] {
+    left: -281px;
+}
+
+.add-row {
+    height:22px;
+    width:22px;
+    display:block;
+    background:none;
+    border:none;
+    cursor:pointer;
+    background: url(/images/add.png) center no-repeat;
+}
