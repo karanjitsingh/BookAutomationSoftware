@@ -2,22 +2,14 @@
 <asp:Content ContentPlaceHolderID="masterContent" runat="server">
     <form runat="server">
 
-        <asp:GridView ID="gridview" DataSourceID="sqlDataSource" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="1" ShowFooter="true" EnableViewState="false">
+        <asp:GridView ID="gridview" DataSourceID="sqlDataSource" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="1" ShowFooter="true" EnableViewState="false" OnRowUpdating="gridview_RowUpdating">
             <Columns>
-                <asp:TemplateField HeaderText="ID">
-                    <ItemTemplate>
-                        <asp:Label ID="lblID" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        <asp:Button ID="btnInsertRow" Text="Add" runat="server" OnClick="btnInsertRow_Click" />
-                    </FooterTemplate>
-                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Name">
                     <ItemTemplate>
                         <asp:Label ID="lblName" runat="server" Text='<%# Bind("name") %>'></asp:Label>
                     </ItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="txtInsertName" runat="server"></asp:TextBox>
+                        <asp:TextBox placeholder= ID="txtInsertName" runat="server"></asp:TextBox>
                     </FooterTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="ISBN">
@@ -48,6 +40,9 @@
                     <ItemTemplate>
                         <asp:Label ID="lblStock" runat="server" Text='<%# Bind("stock") %>'></asp:Label>
                     </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtUpdateStock" runat="server" Text='<%# Eval("stock") %>'></asp:TextBox>
+                    </EditItemTemplate>
                     <FooterTemplate>
                         <asp:TextBox ID="txtInsertStock" runat="server"></asp:TextBox>
                     </FooterTemplate>
@@ -68,8 +63,22 @@
                         <asp:TextBox ID="txtInsertPrice" runat="server"></asp:TextBox>
                     </FooterTemplate>
                 </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="ID">
+                    <ItemTemplate>
+                        <asp:Label ID="lblID" runat="server" Text='<%# Bind("id") %>'></asp:Label>
+                    </ItemTemplate>
+                    <FooterTemplate><asp:Button ID="btnInsertRow" Text="Add" runat="server" OnClick="btnInsertRow_Click" />
+                    </FooterTemplate>
+                </asp:TemplateField>
+                <asp:CommandField ShowEditButton="true" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="sqlDataSource" ConnectionString='<%$ ConnectionStrings:dbcon %>' SelectCommand="select * from inventory" runat="server"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sqlDataSource" ConnectionString='<%$ ConnectionStrings:dbcon %>' SelectCommand="select * from inventory" UpdateCommand="update inventory set stock=@stock, request=0 where id=@id" runat="server">
+            <UpdateParameters>
+                <asp:Parameter Name="stock" />
+                <asp:Parameter Name="id" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
     </form>
 </asp:Content>

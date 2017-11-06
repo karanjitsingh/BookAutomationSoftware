@@ -40,5 +40,18 @@ namespace BookAutomationSoftware
             gridview.DataBind();
 
         }
+
+        protected void gridview_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            int i = e.RowIndex;
+
+            string id = ((Label)gridview.Rows[i].FindControl("lblID")).Text;
+            string stock = ((TextBox)gridview.Rows[i].FindControl("txtUpdateStock")).Text;
+
+            sqlDataSource.UpdateParameters["id"].DefaultValue = id;
+            sqlDataSource.UpdateParameters["stock"].DefaultValue = stock;
+
+            gridview.DataBind();
+        }
     }
 }
