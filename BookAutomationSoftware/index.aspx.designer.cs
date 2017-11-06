@@ -58,6 +58,15 @@ namespace BookAutomationSoftware {
         protected global::System.Web.UI.WebControls.Label lblBookName;
         
         /// <summary>
+        /// lblISBN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblISBN;
+        
+        /// <summary>
         /// lblAuthor control.
         /// </summary>
         /// <remarks>
@@ -85,15 +94,6 @@ namespace BookAutomationSoftware {
         protected global::System.Web.UI.WebControls.Label lblPrice;
         
         /// <summary>
-        /// imgBookImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgBookImage;
-        
-        /// <summary>
         /// lblStock control.
         /// </summary>
         /// <remarks>
@@ -101,6 +101,15 @@ namespace BookAutomationSoftware {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStock;
+        
+        /// <summary>
+        /// imgBookImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgBookImage;
         
         /// <summary>
         /// noResultsDiv control.

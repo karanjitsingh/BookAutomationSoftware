@@ -6,6 +6,10 @@
     font-size: 14px;
 }
 
+span, input, a {
+    font-family: 'Segoe UI';
+}
+
 header {
     width: 100%;
     background: #106ebe;

@@ -51,6 +51,7 @@ namespace BookAutomationSoftware
                 {
                     success = true;
                     lblBookName.Text = reader["name"].ToString();
+                    lblISBN.Text = reader["isbn"].ToString();
                     lblAuthor.Text = reader["author"].ToString();
                     lblPublisher.Text = reader["publisher"].ToString();
                     lblPrice.Text = reader["price"].ToString();
@@ -69,7 +70,7 @@ namespace BookAutomationSoftware
                         reader.Close();
                         cmd.ExecuteNonQuery();
                     }
-                    imgBookImage.ImageUrl = $"http://covers.openlibrary.org/b/isbn/{reader["isbn".ToString()]}-L.jpg";
+                    imgBookImage.ImageUrl = $"http://covers.openlibrary.org/b/isbn/{reader["isbn"].ToString()}-L.jpg";
                 }
                 con.Close();
             }
@@ -120,7 +121,7 @@ namespace BookAutomationSoftware
 
             }
 
-            if(success)
+            if (success)
             {
                 requestForm.Visible = false;
                 requestComeplete.Visible = true;

@@ -67,8 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\BAS\login.css" />
+    <Content Include="App_Themes\BAS\index.css" />
     <Content Include="App_Themes\BAS\theme.css" />
     <Content Include="content\receipt.aspx" />
+    <Content Include="images\search.png" />
     <Content Include="images\logo.png" />
     <Content Include="index.aspx" />
     <Content Include="content\inventory.aspx" />
