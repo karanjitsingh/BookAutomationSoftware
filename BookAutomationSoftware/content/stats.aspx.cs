@@ -11,7 +11,12 @@ namespace BookAutomationSoftware
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            revenueStats.DataBind();
+        }
 
+        protected void calFrom_SelectionChanged(object sender, EventArgs e)
+        {
+            revenueStats.DataBind();
         }
     }
 }
