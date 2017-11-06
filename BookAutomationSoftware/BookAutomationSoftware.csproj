@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="App_Themes\BAS\login.css" />
     <Content Include="App_Themes\BAS\theme.css" />
+    <Content Include="content\receipt.aspx" />
     <Content Include="images\logo.png" />
     <Content Include="index.aspx" />
     <Content Include="content\inventory.aspx" />
@@ -87,6 +88,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="content\receipt.aspx.cs">
+      <DependentUpon>receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\receipt.aspx.designer.cs">
+      <DependentUpon>receipt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="definitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="index.master.cs">
