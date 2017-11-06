@@ -12,11 +12,13 @@ namespace BookAutomationSoftware
         protected void Page_Load(object sender, EventArgs e)
         {
             revenueStats.DataBind();
+            sqlRevenue.DataBind();
         }
 
         protected void calFrom_SelectionChanged(object sender, EventArgs e)
         {
             revenueStats.DataBind();
+            sqlRevenue.DataBind();
         }
     }
 }
