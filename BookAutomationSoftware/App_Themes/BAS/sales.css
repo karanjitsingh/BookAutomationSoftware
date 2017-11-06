@@ -1,0 +1,7 @@
+﻿.sales-content {
+    width: 400px !important;
+}
+
+.sales-content .textbox-validator::before {
+    width: 400px !important;
+}

@@ -13,7 +13,6 @@ namespace BookAutomationSoftware
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblAvailable.Visible = false;
             if(Request.QueryString["isbn"] != null)
             {
                 txtISBN.Text = Request.QueryString["isbn"];
@@ -81,31 +80,12 @@ namespace BookAutomationSoftware
                 }
 
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "popup", "window.open('/content/receipt.aspx?salesid=" + id + "','_blank')", true);
-
-            }
-        }
-
-        protected void txtISBN_TextChanged(object sender, EventArgs e)
-        {
-            if(checkAvailability(txtISBN.Text.Trim()))
-            {
                 lblAvailable.Visible = false;
-                btnSubmit.Enabled = true;
-                int quantity = 0;
-                if (int.TryParse(txtQuant.Text.Trim(), out quantity) && quantity > 0 && validID != "")
-                    lblTotal.Text = "Total: " + (quantity * validPrice);
             }
             else
             {
                 lblAvailable.Visible = true;
             }
-        }
-
-        protected void txtQuant_TextChanged(object sender, EventArgs e)
-        {
-            int quantity = 0;
-            if (int.TryParse(txtQuant.Text.Trim(), out quantity) && quantity > 0 && validID != "")
-                lblTotal.Text = "Total: " + (quantity * validPrice);
         }
     }
 }
