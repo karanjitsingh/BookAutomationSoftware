@@ -11,14 +11,31 @@ namespace BookAutomationSoftware
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["login_session"] != null)
+            {
+                LoginSession ls = (LoginSession)Session["login_session"];
+                if (ls.accessLevel != AccessLevel.Manager)
+                    Response.Redirect("/index.aspx");
+            }
+            else
+            {
+                Response.Redirect("/index.aspx");
+            }
+
             revenueStats.DataBind();
-            sqlRevenue.DataBind();
+            sqlInventoryLevel.DataBind();
         }
 
         protected void calFrom_SelectionChanged(object sender, EventArgs e)
         {
             revenueStats.DataBind();
-            sqlRevenue.DataBind();
+            sqlInventoryLevel.DataBind();
+        }
+
+        protected void txtThreshold_TextChanged(object sender, EventArgs e)
+        {
+            revenueStats.DataBind();
+            sqlInventoryLevel.DataBind();
         }
     }
 }

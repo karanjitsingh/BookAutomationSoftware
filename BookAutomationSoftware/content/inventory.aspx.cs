@@ -9,7 +9,16 @@ namespace BookAutomationSoftware
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["login_session"] != null)
+            {
+                LoginSession ls = (LoginSession)Session["login_session"];
+                if (ls.accessLevel < AccessLevel.Employee)
+                    Response.Redirect("/index.aspx");
+            }
+            else
+            {
+                Response.Redirect("/index.aspx");
+            }
         }
 
         protected void btnInsertRow_Click(object sender, EventArgs e)

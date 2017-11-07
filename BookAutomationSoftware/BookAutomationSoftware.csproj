@@ -70,6 +70,7 @@
     <Content Include="App_Themes\BAS\login.css" />
     <Content Include="App_Themes\BAS\index.css" />
     <Content Include="App_Themes\BAS\sales.css" />
+    <Content Include="App_Themes\BAS\stats.css" />
     <Content Include="App_Themes\BAS\theme.css" />
     <Content Include="content\receipt.aspx" />
     <Content Include="images\edit.png" />
@@ -93,7 +94,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="content\receipt.aspx.cs">

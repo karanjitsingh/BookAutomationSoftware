@@ -1,0 +1,40 @@
+﻿.stats-content input[type=text] {
+    width: 40px;
+    border: 1px solid #ccc;
+    padding: 0px;
+    outline: none;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+    padding: 0px 5px;
+}
+
+.stats-content td, .stats-content table, .stats-content th {
+    border: none;
+    padding: 0px;
+    text-align: center;
+    line-height: 22px;
+    border-collapse: collapse
+}
+
+.stats-content th {
+    border-bottom: 1px solid #ddd;
+}
+
+.dataview th, .dataview td {
+    padding: 0 2px;
+
+}
+
+.dataview {
+    width:100%;
+}
+
+.stats-content {
+    display: flex;
+    flex-direction: column;
+    width: 610px;
+    justify-content: center;
+    margin: 40px auto;
+
+}

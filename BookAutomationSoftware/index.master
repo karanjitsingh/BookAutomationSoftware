@@ -22,7 +22,7 @@
         <nav id="navLinks" runat="server">
             <asp:HyperLink CssClass="selected" Text="Home" Visible="true" runat="server" AccessLevel="1" NavigateUrl="/index.aspx"></asp:HyperLink>
             <asp:HyperLink Text="Sales" Visible="true" runat="server" AccessLevel="1" NavigateUrl="/content/sales.aspx"></asp:HyperLink>
-            <asp:HyperLink Text="Inventory" Visible="true" runat="server" AccessLevel="2" NavigateUrl="/content/inventory.aspx"></asp:HyperLink>
+            <asp:HyperLink Text="Inventory" Visible="true" runat="server" AccessLevel="1" NavigateUrl="/content/inventory.aspx"></asp:HyperLink>
             <asp:HyperLink Text="Stats" Visible="true" runat="server" AccessLevel="2" NavigateUrl="/content/stats.aspx"></asp:HyperLink>
         </nav>
     </header>

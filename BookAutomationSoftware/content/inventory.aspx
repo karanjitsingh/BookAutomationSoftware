@@ -75,6 +75,7 @@
                 </Columns>
                 <AlternatingRowStyle BackColor="#e6eff7"/>
                 <FooterStyle CssClass="insert-row" />
+                <PagerStyle CssClass="pager-style" />
             </asp:GridView>
             <asp:SqlDataSource ID="sqlDataSource" ConnectionString='<%$ ConnectionStrings:dbcon %>' SelectCommand="select * from inventory" UpdateCommand="update inventory set stock=@stock, request=0 where id=@id" runat="server">
                 <UpdateParameters>

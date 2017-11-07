@@ -13,10 +13,23 @@ namespace BookAutomationSoftware
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.QueryString["isbn"] != null)
+            if (Session["login_session"] != null)
+            {
+                LoginSession ls = (LoginSession)Session["login_session"];
+                if (ls.accessLevel < AccessLevel.Employee)
+                    Response.Redirect("/index.aspx");
+            }
+            else
+            {
+                Response.Redirect("/index.aspx");
+            }
+
+            if (Request.QueryString["isbn"] != null)
             {
                 txtISBN.Text = Request.QueryString["isbn"];
             }
+
+
         }
 
         private bool checkAvailability(string isbn)

@@ -62,5 +62,22 @@
     background:none;
     border:none;
     cursor:pointer;
+    outline:none;
     background: url(/images/add.png) center no-repeat;
+}
+
+.pager-style table {
+    font-size:14px;
+    padding-top:2px;
+    display: flex;
+    justify-content:center
+}
+
+.pager-style td {
+    padding: 0 2px;
+}
+
+.pager-style a {
+    text-decoration:none;
+    color:#999;
 }
